@@ -1,4 +1,5 @@
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
@@ -10,8 +11,12 @@ try {
   }
   
   console.log("Starting app render...");
-  const root = createRoot(rootElement);
-  root.render(<App />);
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
   console.log("App rendered successfully");
 } catch (error) {
   console.error("Failed to render app:", error);

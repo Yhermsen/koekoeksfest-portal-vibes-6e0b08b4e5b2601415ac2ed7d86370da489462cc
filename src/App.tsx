@@ -4,16 +4,21 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import { ErrorBoundary } from "react-error-boundary";
+
+// Import pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TimetablePage from "./pages/TimetablePage";
-import Navigation from "./components/Navigation";
 import InfoPage from "./pages/InfoPage";
 import ArtistsPage from "./pages/ArtistsPage";
+
+// Import components
+import Navigation from "./components/Navigation";
 import Breadcrumbs from "./components/Breadcrumbs";
 import { useAnalytics } from "./hooks/useAnalytics";
-import { ErrorBoundary } from "react-error-boundary";
 
+// Create a client
 const queryClient = new QueryClient();
 
 // Error fallback component
