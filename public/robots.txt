@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /error
+
+# Sitemap
+Sitemap: https://utkoekoeksfest.nl/sitemap.xml
